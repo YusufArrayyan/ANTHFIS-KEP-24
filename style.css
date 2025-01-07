@@ -1,0 +1,918 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* h2 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #244184;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-brand span {
+  color: white;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9f9f;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../Assets/whatsappimage20241222at0002342818-e6nb-700h.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+}
+
+/* Overlay untuk membuat teks lebih mudah dibaca */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+  max-width: 600px;
+  margin-left: 40px;
+  margin-top: 80px;
+}
+
+/* Memastikan teks tetap terbaca dengan baik */
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 5px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: white;
+  margin: 15px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #1a2f5f;
+}
+
+/* Menu Cards */
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 5rem 5%;
+}
+
+/* .card {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+} */
+
+.click-btn {
+  display: inline-block;
+  background-color: #244184;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+/* header our content */
+.header {
+  background-color: #87CEEB;
+  padding: 40px 20px;
+  position: relative;
+  padding: 80px 0 60px 60px;
+  margin-top: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.content-header {
+  max-width: 50%;
+  z-index: 2;
+}
+
+.content-header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.2rem;
+  color: #1a237e;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.content-header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 90%;
+}
+
+.header-image {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 95%;
+  width: auto;
+  object-fit: cover;
+  z-index: 1;
+  margin-right: 20px;
+}
+
+/* Content Main */
+.content-main h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: flex;
+  gap: 3.5rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background-color: rgba(117, 200, 226, 1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 1.25rem;
+  width: 18.75rem;
+}
+
+.card img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 0.3rem;
+}
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background-color: #1a2f5f;
+  color: white;
+  transition: 0.3s;
+}
+
+.jelajah {
+  background-color: rgba(117, 200, 226, 1);
+  padding: 3.5rem 4rem;
+  height: 25rem;
+  position: relative;
+}
+
+.content-jelajah {
+  margin-bottom: 4rem;
+}
+
+.jelajah .content-jelajah img {
+  width: 18rem;
+  position: absolute;
+  left: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.jelajah .content-jelajah p {
+  max-width: 38rem;
+  text-align: right;
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Footer */
+.footer {
+  background-color: #244184;
+  color: white;
+  padding: 5rem 5%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff9f9f;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ff9f9f;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #244184;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .menu-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Navigation */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #244184;
+  padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+}
+
+/* Content Section Styles */
+.content-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #1a237e;
+    margin: 30px 0;
+}
+
+.content-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.content-card {
+    background-color: #e3f2fd;
+    border-radius: 35px;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 180px;
+    height: 220px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.card-content {
+    text-align: center;
+    width: 100%;
+}
+
+.card-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+.arrow-circle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.arrow-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-card {
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    .card-image {
+        width: 150px;
+        height: 180px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .arrow-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow-icon {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-title {
+        font-size: 1.5rem;
+        margin: 20px 0;
+    }
+
+    .content-card {
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .card-image {
+        width: 130px;
+        height: 160px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-card {
+        max-width: 360px;
+    }
+}
+
+section {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    background-color: #87CEEB;
+    min-height: 400px;
+}
+
+.search-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: black;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+}
+
+.search-image {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .search-container {
+        min-height: 350px;
+    }
+
+    .search-text {
+        font-size: 1.6rem;
+        max-width: 700px;
+        padding: 0 20px;
+    }
+    
+    .search-image {
+        width: 200px;
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        min-height: 300px;
+    }
+
+    .search-text {
+        font-size: 1.4rem;
+        max-width: 600px;
+    }
+    
+    .search-image {
+        width: 150px;
+        opacity: 0.4;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-container {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+
+    .search-text {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+    
+    .search-image {
+        width: 100px;
+        opacity: 0.3;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .search-text {
+        font-size: 1.1rem;
+    }
+    
+    .search-image {
+        display: none;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .content-header {
+        max-width: 65%;
+    }
+
+    .content-header h1 {
+        font-size: 3rem;
+    }
+
+    .content-header p {
+        font-size: 1rem;
+    }
+
+    .header-image {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 30px 15px;
+    }
+
+    .content-header {
+        max-width: 100%;
+    }
+
+    .content-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-header p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .header-image {
+        width: 30%;
+        opacity: 0.4; /* Membuat gambar lebih transparan */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 25px 15px;
+    }
+
+    .content-header h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .content-header p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .header-image {
+        width: 25%;
+        opacity: 0.3;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        padding: 20px 10px;
+    }
+
+    .content-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-header p {
+        font-size: 0.85rem;
+    }
+
+    .header-image {
+        width: 20%;
+        opacity: 0.2;
+    }
+}
+
+/* Card Styles */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.card-cardio, .card-respiratory {
+    background-color: #87CEEB;
+    border-radius: 25px;
+    width: 350px;
+    min-height: 450px;
+    padding: 30px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+/* Styling untuk gambar */
+.card-cardio img, .card-respiratory img {
+    width: 280px;
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+/* Text styling */
+.card-cardio h3, .card-respiratory h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-cardio p, .card-respiratory p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Button styling */
+.card-cardio a, .card-respiratory a {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card-cardio, .card-respiratory {
+        width: 300px;
+        min-height: 400px;
+    }
+
+    .card-cardio img, .card-respiratory img {
+        width: 250px;
+        margin-bottom: 35px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-cardio, .card-respiratory {
+        width: 280px;
+        min-height: 380px;
+    }
+
+    .card-cardio img, .card-respiratory img {
+        width: 220px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    .card-cardio h3, .card-respiratory h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .card-cardio p, .card-respiratory p {
+        font-size: 0.9rem;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-cardio, .card-respiratory {
+        width: 260px;
+        min-height: 350px;
+    }
+
+    .card-cardio img, .card-respiratory img {
+        width: 200px;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    .card-cardio h3, .card-respiratory h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .card-cardio p, .card-respiratory p {
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+    }
+}
+
+/* Learn More button styles tetap sama */
+.card-cardio a, .card-respiratory a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.card-cardio a::after, .card-respiratory a::after {
+    content: "→";
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+.card-cardio a:hover, .card-respiratory a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(5px);
+}
