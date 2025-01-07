@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANTHFIS KEPERAWATAN 24</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Bebas+Neue"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="../HOME/home.html"
+          ><img src="../Assets/Logo_UNIB.png" alt="Logo" class="logo"
+        /></a>
+        <span>ANTHFIS KEPERAWATAN 24</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../HOME/home.html">HOME</a></li>
+        <li><a href="../ABOUT US/About Us.html">ABOUT US</a></li>
+        <li><a href="../CONTENT/content.html">CONTENT</a></li>
+        <li><a href="../CONTACTS/contacts.html">CONTACTS</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header>
+      <section class="header">
+        <div class="content-header">
+          <h1>OUR CONTENT</h1>
+          <p>Konten dalam aplikasi ini dirancang untuk memberikan informasi yang akurat dan terpercaya seputar anatomi kardiovaskular dan respirasi. Semua materi disusun berdasarkan sumber ilmiah dan pengalaman belajar kami sebagai mahasiswa keperawatan, dengan tujuan membantu masyarakat memahami dan menjaga kesehatan jantung serta paru-paru mereka.</p>
+        </div>
+        <img src="../Assets/Untitled design (1).png" alt="Medical Tools" class="header-image">
+      </section>
+    </header>
+
+    <main>
+      <section class="content-main">
+        <h2>Ayo Belajar Bersama Kami !</h2>
+        <div class="cards-container">
+          <div class="card-cardio">
+            <img src="../Assets/2.png" alt="cardiovascular" />
+            <h3>CARDIOVASKULAR</h3>
+            <p>
+              Pelajari cara kerja jantung dan pembuluh darah, serta cara menjaga
+              kesehatannya.
+            </p>
+            <a href="../CONTENT/CARDIO HOME/cardio.html">Learn More</a>
+          </div>
+          <div class="card-respiratory">
+            <img src="../Assets/1.png" alt="respiratory" />
+            <h3>RESPIRATION</h3>
+            <p>
+              Kenali anatomi paru-paru dan pentingnya sistem pernapasan dalam kehidupan sehari-hari.
+            </p>
+            <a href="../CONTENT/RESPI HOME/respi.html">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="jelajah">
+        <div class="content-jelajah">
+
+          <p>
+            Jelajahi serunya mempelajari materi Cardiovascular dan Respiratory
+            di aplikasi ini! Tingkatkan pemahamanmu tentang sistem tubuh yang
+            vital dengan penjelasan interaktif dan mudah dipahami. Yuk mulai
+            belajar sekarang dan temukan cara kerja tubuhmu yang luar biasa!
+          </p>
+          <img src="../Assets/kaca-pembesar.png" alt="Search Icon" class="search-image">
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ANTHFIS KEPERAWATAN 24</h3>
+          <p>
+            Melalui aplikasi ini, kami berharap dapat menjadi bagian dari solusi
+            dalam meningkatkan pemahaman masyarakat tentang pentingnya menjaga
+            kesehatan.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/keperawatanunib?igsh=cXZ3amdyd3Zkcmgx"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>NAVIGATION</h3>
+          <ul>
+            <li><a href="../HOME/home.html">Home</a></li>
+            <li><a href="../CONTENT/content.html">Content</a></li>
+            <li><a href="../ABOUT US/About Us.html">ABOUT US</a></li>
+            <li><a href="../CONTACTS/contacts.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>GET IN TOUCH</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Jl. Indragiri, Padang Harapan,
+            Bengkulu
+          </p>
+          <p><i class="fas fa-phone"></i> (0736) 20919</p>
+          <p><i class="fas fa-envelope"></i> anthfiskep@gmail.com</p>
+        </div>
+        <div class="footer-logo">
+          <img src="../Assets/Logo_UNIB.png" alt="Logo UNIB" />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const body = document.querySelector("body");
+
+      hamburger.addEventListener("click", () => {
+        // Toggle class active pada hamburger dan nav-links
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Menutup menu saat link diklik
+      document.querySelectorAll(".nav-links li a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Menutup menu saat mengklik di luar menu
+      document.addEventListener("click", (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
