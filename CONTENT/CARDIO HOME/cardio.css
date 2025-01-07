@@ -1,0 +1,773 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 45px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a1a4b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8794b7;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    padding: 4rem;
+    position: relative;
+    min-height: calc(100vh - 80px);
+    padding-top: 100px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-top: 4rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #1a1a4b;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 350px;
+    background-color: #8794b7;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 2px;
+        background-color: #1a1a4b;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 2rem;
+        text-align: center;
+        gap: 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-image::after {
+        width: 300px;
+        height: 300px;
+        right: -50px;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-image::after {
+        width: 250px;
+        height: 250px;
+        right: -30px;
+    }
+}
+
+/* Tambahkan CSS ini */
+.categories-section {
+    background-color: #e6f3f7;
+    padding: 4rem 2rem;
+}
+
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    background-color: #f0f8ff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.category-card h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #1a1a4b;
+}
+
+.click-btn {
+    background-color: #1a1a4b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.click-btn:hover {
+    background-color: #2a2a6b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .categories-container {
+        gap: 1.5rem;
+    }
+
+    .category-card {
+        width: 160px;
+        padding: 1.5rem;
+    }
+
+    .category-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categories-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-card {
+        width: 200px;
+    }
+}
+
+/* Tambahkan CSS ini */
+.anatomy-section {
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background-color: #fff;
+}
+
+.anatomy-content {
+    flex: 1;
+}
+
+.anatomy-content h2 {
+    font-size: 3rem;
+    color: #1a1a4b;
+    margin-bottom: 2rem;
+}
+
+.anatomy-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.anatomy-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.anatomy-image img {
+    height: 600px;
+    object-fit: contain;
+}
+
+.anatomy-btn {
+    position: absolute;
+    background-color: #8ed4e6;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.anatomy-btn:hover {
+    background-color: #6bc1d6;
+}
+
+/* Posisi button */
+.anatomy-btn.head {
+    top: 5%;
+    right: 20%;
+}
+
+.anatomy-btn.chest {
+    top: 25%;
+    right: 15%;
+}
+
+.anatomy-btn.torso {
+    top: 45%;
+    right: 15%;
+}
+
+.anatomy-btn.arm {
+    top: 55%;
+    right: 10%;
+}
+
+.anatomy-btn.leg {
+    bottom: 20%;
+    right: 15%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .anatomy-section {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .anatomy-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .anatomy-image img {
+        height: 400px;
+    }
+
+    .anatomy-btn {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .anatomy-image img {
+        height: 300px;
+    }
+}
+
+/* Tambahkan CSS ini */
+.cardiovascular-anatomy {
+    background-color: #e6f3f7;
+    padding: 4rem 2rem;
+}
+
+.anatomy-title {
+    text-align: center;
+    color: #1a1a4b;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    font-weight: bold;
+}
+
+.heart-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.heart-image {
+    flex: 1;
+    background-color: #1a1a4b;
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+.heart-content {
+    flex: 1;
+    text-align: right;
+}
+
+.heart-content h2 {
+    color: #1a1a4b;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.heart-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .anatomy-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .heart-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .heart-content {
+        text-align: center;
+    }
+
+    .heart-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Tambahkan CSS ini */
+.blood-vessels-section {
+    background-color: #e6f3f7;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vessels-content {
+    flex: 1;
+}
+
+.vessels-content h2 {
+    color: #1a1a4b;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.vessels-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.vessels-image {
+    flex: 1;
+    background-color: #1a1a4b;
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vessels-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .blood-vessels-section {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .vessels-content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .vessels-content p {
+        text-align: center;
+    }
+}
+
+/* Tambahkan CSS ini */
+.circulatory-section {
+    background-color: #e6f3f7;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.circulatory-image {
+    flex: 1;
+    background-color: #1a1a4b;
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulatory-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+.circulatory-content {
+    flex: 1;
+    text-align: right;
+}
+
+.circulatory-content h2 {
+    color: #1a1a4b;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.circulatory-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .circulatory-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .circulatory-content {
+        text-align: center;
+    }
+
+    .circulatory-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Tambahkan CSS ini */
+.physiology-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.physiology-title {
+    color: #1a1a4b;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.physiology-subtitle {
+    color: #333;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #1a1a4b;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-number {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 2px solid #1a1a4b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a4b;
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.timeline-content h3 {
+    color: #1a1a4b;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .physiology-title {
+        font-size: 2rem;
+    }
+
+    .timeline::before {
+        left: 25px;
+    }
+
+    .timeline-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content {
+        padding-left: 1.5rem;
+    }
+}
+
+/* Update CSS untuk footer */
+.footer {
+    background-color: #1a1a4b;
+    color: #fff;
+    padding: 3rem 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+/* Brand Column */
+.footer-column.brand {
+    flex: 2;
+}
+
+.footer-column.brand h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.footer-column.brand p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Navigation Column */
+.footer-column.nav {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Contact Column */
+.footer-column.contact {
+    flex: 1.5;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+.contact-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Tambahkan style untuk logo link */
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
