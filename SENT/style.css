@@ -1,0 +1,448 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #244184;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-brand span {
+    color: white;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9f9f;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* Main Content Styles */
+.main-content {
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a5acd, #2b1055);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    width: 600px; /* Ukuran default untuk desktop */
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.notification {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 350px;
+}
+
+.thank-you-button {
+    background-color: #244184;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    position: absolute;
+    left: 630px;
+    bottom:-150px;
+    transform: translateX(-50%);
+    text-align: center;
+    width: auto;
+    min-width: 300px;
+}
+
+/* White curve */
+.main-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background-color: white;
+    clip-path: ellipse(100% 100% at 50% 100%);
+}
+
+/* Notification Button Styles */
+.notification {
+    margin-top: 0%; /* Space above the button */
+}
+
+.notification .thank-you-button {
+    background-color: #0c4179; /* Primary button color */
+    color: white; /* Text color */
+    padding: 1rem 2rem; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button Hover Effect */
+.notification .thank-you-button:hover {
+    background-color: #05203d; /* Darker shade on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 3rem 2%; /* Reduced padding for smaller screens */
+    }
+
+    .notification .thank-you-button {
+        font-size: 1rem; /* Smaller font size for button */
+        padding: 0.8rem 1.5rem; /* Adjusted padding for button */
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #244184;
+    color: white;
+    padding: 5rem 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff9f9f;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ff9f9f;
+}
+
+.footer-logo img {
+    width: 220px;
+    height: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #244184;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Navigation */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #244184;
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero-content {
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+
+    .image-container {
+        width: 300px;
+        transform: translate(-50%, -75%);
+    }
+
+    .notification {
+        margin-top: 260px;
+    }
+
+    .thank-you-button {
+        font-size: 1.4rem;
+        min-width: 250px;
+        bottom: 10px;
+        left: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        width: 250px;
+        transform: translate(-50%, -70%);
+    }
+
+    .notification {
+        margin-top: 220px;
+    }
+
+    .thank-you-button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        min-width: 200px;
+    }
+}
+
+/* Responsive Design - Khusus untuk Mobile dan Tablet */
+@media screen and (max-width: 1024px) {
+    /* Tablet */
+    .image-container {
+        position: static; /* Ubah ke static untuk flow normal */
+        width: 70vw; /* Diperkecil dari 90vw */
+        max-width: 600px; /* Diperkecil dari 800px */
+        transform: none;
+        margin-bottom: 30px;
+    }
+
+    .notification {
+        margin-top: 0; /* Reset margin karena image sudah static */
+    }
+
+    .thank-you-button {
+        font-size: 1.4rem;
+        padding: 12px 30px;
+        min-width: 280px;
+        bottom: 10px;
+        left: 320px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Tablet kecil */
+    .image-container {
+        width: 75vw;
+        max-width: 550px;
+    }
+
+    .thank-you-button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile (diposisikan lebih ke tengah) */
+    .container {
+        justify-content: center; /* Memastikan centering vertikal */
+    }
+    
+    .image-container {
+        width: 85vw;
+        max-width: 500px;
+        transform: translate(-50%, -50%); /* Menggeser ke tengah sempurna */
+        top: 50%; /* Memastikan posisi vertikal di tengah */
+    }
+
+    .thank-you-button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /* Mobile kecil */
+    .image-container {
+        width: 90vw;
+        max-width: 450px;
+    }
+
+    .thank-you-button {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+        min-width: 220px;
+    }
+}
+
+/* Device sangat kecil */
+@media screen and (max-width: 320px) {
+    .main-content {
+        padding: 10px;
+    }
+    
+    .image-container {
+        width: 95vw;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+
+/* Landscape mode */
+@media screen and (max-height: 500px) {
+    .image-container {
+        width: 60vw;
+        max-width: 500px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Landscape mode untuk mobile */
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+    .container {
+        padding: 20px 0;
+    }
+
+    .image-container {
+        width: 40%;
+        max-width: 180px;
+        margin-bottom: 15px;
+    }
+}

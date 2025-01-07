@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTHFIS KEPERAWATAN 24</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="../HOME/home.html"><img src="../Assets/Logo_UNIB.png" alt="LOGO UNIB.png" class="logo"></a>
+            <span>ANTHFIS KEPERAWATAN 24</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../HOME/home.html">HOME</a></li>
+            <li><a href="../ABOUT US/About Us.html">ABOUT US</a></li>
+            <li><a href="../CONTENT/content.html">CONTENT</a></li>
+            <li><a href="../CONTACTS/contacts.html">CONTACTS</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+<!-- Main Content -->
+<div class="main-content">
+    <div class="container">
+        <div class="image-container">
+            <img src="../Assets/ICON SENT.png" alt="Nurse illustration"/>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer" id="contacts">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ANTHFIS KEPERAWATAN 24</h3>
+                <p>Melalui aplikasi ini, kami berharap dapat menjadi bagian dari solusi dalam meningkatkan pemahaman masyarakat tentang pentingnya menjaga kesehatan.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/keperawatanunib?igsh=cXZ3amdyd3Zkcmgx"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li><a href="../HOME/home.html">Home</a></li>
+                    <li><a href="../CONTENT/content.html">Content</a></li>
+                    <li><a href="../CONTACTS/contacts.html">Contact</a></li>
+                    <li><a href="../ABOUT US/about us.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>GET IN TOUCH</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Indragiri, Padang Harapan, Bengkulu</p>
+                <p><i class="fas fa-phone"></i> (0736) 20919</p>
+                <p><i class="fas fa-envelope"></i> anthfiskep@gmail.com</p>
+            </div>
+            <div class="footer-logo">
+            <img src="../Assets/LOGO UNIB.png" alt="LOGO UNIB.png" class="logo">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.querySelector('body');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle class active pada hamburger dan nav-links
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Menutup menu saat link diklik
+        document.querySelectorAll('.nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Menutup menu saat mengklik di luar menu
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
